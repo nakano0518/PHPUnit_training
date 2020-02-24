@@ -13,4 +13,20 @@ composerのみで実行できるようにbinに登録
 alias phpunit="./vendor/phpunit/phpunit/phpunit"を実行
 
 以上で、プロジェクトディレクトリ上にいる状態で
-「phpunit テストクラスへのフルパス(ファイル名含む)」の形でテストを実行
+「phpunit tests/フォルダ名」の形でテストを実行
+※フォルダ名を含めず「phpunit tests/」を実行すると、
+フォルダ内に含まれるテストクラスがすべて実行される
+
+他、
+
+phpunit tests/ --filter=testReturnsFullName(←メソッド名指定)
+⇒テストケースでフィルターして実行。数の多いメソッドの中で一つだけ実行したい場合。
+
+phpunit tests/ --color
+⇒テストケースがpassしたら緑、failしたら赤に着色
+
+phpunit
+⇒コマンドオプション一覧が表示される
+
+※phpunitコマンドのオプションをあらかじめ設定しておきたい場合、
+ルートにphpunit.xmlを作成し、記述しておく

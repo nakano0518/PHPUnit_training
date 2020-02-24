@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- phpunitコマンドのオプションなどの設定ができる -->
+<phpunit colors="true">
+    <testsuite name="Test suite">
+        <directory>tests</directory>
+    </testsuite>
+</phpunit>
+<!--
+memo
+・phpunitタグのcolors属性にtrueをすると、テスト成功時緑、失敗時赤に着色
+・testsuiteタグのname属性に好きな名前をつけると、使用するときのラベルとなる
+・directoryタグのなかに、プロジェクトのディレクトリからの相対パスで、testクラスのある
+ディレクトリを指定(ここではtests)
+・directoryタグの属性としてsuffixを指定することでテスト実行するファイルを制限する
+(例)<directory suffix="Test.php">tests</directory>⇒testsディレクトリの中のTest.phpを含むファイルのみ実行
+-->

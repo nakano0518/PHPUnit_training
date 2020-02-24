@@ -17,7 +17,7 @@ class ExampleTest extends TestCase
 
 //テストメソッド(テストケース)に関して
 //publicメソッドであること
-//testで始まるメソッド名であること
+//testで始まるメソッド名であること(付与しなければ無視される)
 //その中でassertionする
 //$this->assertEquals(期待値, 実測値);//期待値と実測値が一致するか(true/false)
 
