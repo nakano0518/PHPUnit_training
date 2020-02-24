@@ -16,7 +16,7 @@ class UserTest extends TestCase
     
     public function testFullNameIsEmptyByDefault()
     {
-        $user = new User;//テストケースごとにインスタンスは削除(ブロックスコープ)、インスタンス生成が必要。
+        $user = new User;//テストケースごとにインスタンスは削除(ブロックスコープ)//インスタンス生成が必要。
         $this->assertEquals('', $user->getFullName());
     }
 }
