@@ -20,3 +20,5 @@ class ExampleTest extends TestCase
 //testで始まるメソッド名であること
 //その中でassertionする
 //$this->assertEquals(期待値, 実測値);//期待値と実測値が一致するか(true/false)
+
+//ユニットテストは、functionやclassのふるまいをtestする。
