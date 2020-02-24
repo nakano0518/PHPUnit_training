@@ -1,0 +1,16 @@
+【Linuxの場合】
+1.最新バージョンのPHPにする
+参考) https://qiita.com/kidatti/items/2d6a4a24f89dc71eb66e
+2.Composerのインストール
+(1)https://getcomposer.org/download/
+においてCommand-line installationの4行のコードをコピーし実行
+(2)sudo mv composer.phar /usr/local/bin/composer実行
+composerのみで実行できるようにbinに登録
+(3)プロジェクトディレクトリを作成し、cdする
+(4)composer require --dev phpunit/phpunit ^7を実行
+(参考)https://phpunit.de/getting-started/phpunit-7.html
+(5)テストをphpunitコマンド1発で実行するためのエイリアス登録
+alias phpunit="./vendor/phpunit/phpunit/phpunit"を実行
+
+以上で、プロジェクトディレクトリ上にいる状態で
+「phpunit テストクラスへのフルパス(ファイル名含む)」の形でテストを実行
