@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- phpunitコマンドのオプションなどの設定ができる -->
-<phpunit colors="true">
-    <testsuite name="Test suite">
-        <directory>tests</directory>
-    </testsuite>
+<phpunit colors="true" 
+         verbose="true"
+         bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="Test suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
 <!--
 memo
 ・phpunitタグのcolors属性にtrueをすると、テスト成功時緑、失敗時赤に着色
+また、verbose属性をtrueとすると、エラーレポートがverbose(多弁)になる。
+★phpunitタグに上記のようにbootstrap属性を記述しておくと、phpunit --bootstrap='vendor/autoload.php'コマンドを実行したことと同じ。
+そして、vendor/autoload.phpにはcomposer.jsonに記載のautoloadするフォルダ名が記述されている(記述したらcomposer autoload-dumpを実行して反映)。
+⇒つまり、phpunitコマンド実行時にクラスファイルが読み込まれるということ。
 ・testsuiteタグのname属性に好きな名前をつけると、使用するときのラベルとなる
 ・directoryタグのなかに、プロジェクトのディレクトリからの相対パスで、testクラスのある
 ディレクトリを指定(ここではtests)
 ・directoryタグの属性としてsuffixを指定することでテスト実行するファイルを制限する
 (例)<directory suffix="Test.php">tests</directory>⇒testsディレクトリの中のTest.phpを含むファイルのみ実行
+・directoryタグを設定すると、以前phpunitコマンドでオプション一覧が表示されたが
+phpunitだけでテストを実行できるようになる。オプション一覧を表示させたい場合、phpunit -hでできる。
+(詳細はマニュアル参照)https://phpunit.readthedocs.io/en/7.4/configuration.html
 -->

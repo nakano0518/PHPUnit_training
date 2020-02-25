@@ -1,5 +1,11 @@
 {
-    "require-dev": {
+    "require": {
         "phpunit/phpunit": "^7"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
     }
+    
 }
