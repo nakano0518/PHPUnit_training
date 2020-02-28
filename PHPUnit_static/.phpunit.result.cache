@@ -1,1 +1,1 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":44:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:0:{}}}
+C:37:"PHPUnit\Runner\DefaultTestResultCache":270:{a:2:{s:7:"defects";a:1:{s:31:"UserTest::testNotifyReturnsTrue";i:6;}s:5:"times";a:3:{s:38:"MailerTest::testSendMessageReturnsTrue";d:0.002;s:54:"MailerTest::testInvalidArgumentExceptionIfEmailIsEmpty";d:0;s:31:"UserTest::testNotifyReturnsTrue";d:0.0030000000000000001;}}}
