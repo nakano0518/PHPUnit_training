@@ -9,7 +9,7 @@
  */
 class Order
 {
-
+    
     /**
      * Amount
      * @var int
